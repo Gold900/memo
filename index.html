@@ -148,6 +148,17 @@
                 text-align: center;
             }
         }
+        .screenshot-hint button {
+            background: none;
+            border: none;
+            color: #3498db;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 0;
+        }
+        .screenshot-hint button:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -178,14 +189,10 @@
         <h2>Как прислать документы:</h2>
         <p>Отправьте сканы с указанием номера бокса:</p>
         <ul>
-            <li>Через форму: <a href="https://сайт">https://сайт</a></li>
+            <li>Через форму: <a href="https://example.com">https://example.com</a></li>
             <li>На почту: <a href="mailto:office@uristam.ru">office@uristam.ru</a></li>
             <li>В WhatsApp — в личные сообщения</li>
-            <li>По адресу: ул. Мечникова, 114/134, этаж 2, офис 202
-                <div class="notarius-photo">
-                    <a href="https://yandex.ru/maps/org/yuvenergochermet/1202539039/gallery/?ll=39.690202%2C47.238667&photos%5Bbusiness%5D=1202539039&photos%5Bid%5D=urn%3Ayandex%3Asprav%3Aphoto%3A5596516-2a0000017dab5b57fa8814b76c3629172ef8&z=17" target="_blank">Фото здания →</a>
-                </div>
-            </li>
+            <li>По адресу: ул. Мечникова, 114/134, этаж 2, офис 202</li>
         </ul>
     </div>
 
@@ -216,7 +223,7 @@
             <div class="step">Заказ схемы расположения участка (до 5 дней).</div>
             <div class="step">Подача схемы в МФЦ на предварительное согласование (14–21 день).</div>
             <div class="step"><span class="highlight">*(При отказе — исправление и повторная подача, +30 дней).*</span></div>
-            <div class="step">Полная оплата по Договору производиться после получения Распоряжения (о предварительном согласовании). <span class="highlight">* возрастная категория клиентов 60+ оплату производит за технический пакет документов до получения Распоряжения.*</span></div>
+            <div class="step">Полная оплата по Договору производится после получения Распоряжения (о предварительном согласовании). <span class="highlight">* возрастная категория клиентов 60+ оплату производит за технический пакет документов до получения Распоряжения.*</span></div>
             <div class="step">Заказ межевого плана (до 3 дней).</div>
             <div class="step">Подача межевого плана в МФЦ на кадастровый учёт (7–10 дней).</div>
             <div class="step">Получение выписки на земельный участок.</div>
@@ -246,16 +253,37 @@
         </details>
         <details>
             <summary>Почему полная оплата производится после получения Распоряжения, а не в конце всего процесса?</summary>
-                <div class="payment-explanation">
-                    <p><strong>Распоряжение администрации</strong> - это ключевой документ, который подтверждает:</p>
-                    <ol>
+            <div class="payment-explanation">
+                <p><strong>Распоряжение администрации</strong> - это ключевой документ, который подтверждает:</p>
+                <ol>
                     <li>Земельный участок <strong>предварительно согласован</strong> для передачи вам в собственность</li>
                     <li>ДИЗО (Департамент имущественно-земельных отношений) <strong>одобрил ваше право</strong> на участок</li>
                     <li>Основные кадастровые работы (топосъемка, техплан, схема расположения) <strong>успешно завершены</strong></li>
-                    </ol>
-                    
-                    <p>После этого этапа остаются технические процедуры</p>
-                </details>
+                </ol>
+                <p>После этого этапа остаются технические процедуры</p>
+            </div>
+        </details>
+        <details>
+            <summary>Как получить выписку из ЕГРН через Госуслуги?</summary>
+            <div class="egrn-instruction">
+                <ol>
+                    <li>Авторизуйтесь на <a href="https://gosuslugi.ru" target="_blank">Госуслугах</a></li>
+                    <li>В правом нижнем углу найдите помощника <strong>"Макс"</strong> (синий круг с иконкой сообщения)</li>
+                    <li>Напишите в чат: <strong>"Выписка ЕГРН"</strong></li>
+                    <li>Выберите тип выписки (об объекте недвижимости)</li>
+                    <li>И в выберите Гараж (Здание или помещение)</li>
+                    <li>Оплатите госпошлину (от 250 ₽)</li>
+                    <li>Получите выписку в личном кабинете</li>
+                </ol>
+                <div class="screenshot-hint">
+                    <button type="button" onclick="document.getElementById('screenshots').style.display = 'block'">Показать скриншоты процесса →</button>
+                    <div id="screenshots" style="display:none; margin-top:15px;">
+                        <img src="gosuslugi-step1.jpg" alt="Шаг 1: Поиск помощника Макс" width="200">
+                        <img src="gosuslugi-step2.jpg" alt="Шаг 2: Выбор услуги" width="200">
+                    </div>
+                </div>
+            </div>
+        </details>
     </div>
 
     <div class="contact">
@@ -268,7 +296,6 @@
             <li>Телефон: <a href="tel:+79198710708">8 (919) 871-07-08</a></li>
             <li>WhatsApp: <a href="https://wa.me/79198710708">+7 (919) 871-07-08</a></li>
         </ul>
-        
         <div class="quick-contact">
             <a href="tel:+79198710708">Позвонить нам</a>
             <a href="https://wa.me/79198710708">Написать в WhatsApp</a>
